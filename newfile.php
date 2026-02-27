@@ -44,6 +44,7 @@
     echo greet("Mahyar");
     //function String
     
+    // echo "<br>" ; 
     // echo strlen($str1); تعداد حروف
     // echo str_word_count($str1); تعداد کلمات
     // echo strrev($str1); برعکس کردن رشته
@@ -66,20 +67,86 @@
     $num1 = 12;
     $num2 = 23;
 
-    echo $num1 + $num2; // جمع
-    echo $num1 - $num2; // تفریق    
-    echo $num1 * $num2; // ضرب
-    echo $num1 / $num2; // تقسیم
-    echo $num1 % $num2; //  باقیمانده
-    echo $num1 ** 2; // توان    
-    var_dump($num1 == $num2); // مقایسه مساوی
-    var_dump($num1 != $num2); // مقایسه نابرابر
-    var_dump($num1 > $num2); // بزرگتر
-    var_dump($num1 < $num2); // کوچکتر    
+    // echo $num1 + $num2; // جمع
+    // echo $num1 - $num2; // تفریق    
+    // echo $num1 * $num2; // ضرب
+    // echo $num1 / $num2; // تقسیم
+    // echo $num1 % $num2; //  باقیمانده
+    // echo $num1 ** 2; // توان    
+    // var_dump($num1 == $num2); // مقایسه مساوی
+    // var_dump($num1 != $num2); // مقایسه نابرابر
+    // var_dump($num1 > $num2); // بزرگتر
+    // var_dump($num1 < $num2); // کوچکتر    
+    // echo $num1++; // افزایش بعد از استفاده
+    // echo ++$num1; // افزایش قبل از استفاده
     
+    // if
+    // if($num1 > $num2) {
+    //     echo "num1 is greater than num2";
+    // } elseif($num1 < $num2) {
+    //     echo "num1 is less than num2";
+    // } else {
+    //     echo "num1 is equal to num2";
+    // }
+
+    // // or , || , and , &&
+    // if($num1==10 or $num2== 10) {
+    //     echo "at least one number is 10";
+    // } else {
+    //     echo "neither number is 10";
+    // }
+    // if($num1==10 && $num2== 10) {
+    //     echo "both numbers are 10";
+    // } else {
+    //     echo "neither number is 10";
+    // }
     
+    // for , switch
+    switch($num1) {
+        case 10:
+            echo "num1 is 10";
+            break;
+        case 20:
+            echo "num1 is 20";
+            break;
+        default:
+            echo "num1 is neither 10 nor 20";
+    }
     
+    for($i = 0; $i < $num2; $i++){
+        echo $i . ' ';
+    }
+    echo '<br>';
+    while($num1 < $num2) {
+        echo $num1 . ' ';
+        $num1++;
+    }
     
+    do {
+        echo $num1 . ' ';
+        $num1++;
+    } while($num1 < $num2);
+    echo '<br>';
+    foreach($color as $c) {
+        echo $c . ' ';
+        echo '<br>';    
+    }
+    $age=array("mahyar"=>21, "ali"=>25, "sara"=>19);
+    foreach($age as $name => $a) {  
+    echo $name . " is " . $a . " years old.<br>";
+    echo "<br>";    
+    }
+        
+
+    //functions
+        
+    function nameFrindes(string $name){
+        echo $name . "Is here";
+    }
+    function sum(int $x,int $y){
+        return $x + $y;
+    }
+    echo sum(5, 10);
     
     
     ?>
